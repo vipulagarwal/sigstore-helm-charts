@@ -55,6 +55,7 @@ Part of the sigstore project, Rekor is a timestamping server and transparency lo
 | createtree.ttlSecondsAfterFinished | int | `3600` |  |
 | forceNamespace | string | `""` |  |
 | imagePullSecrets | list | `[]` |  |
+| initContainerResources | string | `""` |  |
 | initContainerImage.curl.imagePullPolicy | string | `"IfNotPresent"` |  |
 | initContainerImage.curl.registry | string | `"docker.io"` |  |
 | initContainerImage.curl.repository | string | `"curlimages/curl"` |  |
