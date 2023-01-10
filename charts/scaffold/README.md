@@ -48,10 +48,12 @@ helm uninstall [RELEASE_NAME]
 |-----|------|---------|-------------|
 | copySecretJob.backoffLimit | int | `6` |  |
 | copySecretJob.enabled | bool | `false` |  |
+| copySecretJob.initContainerResources | string | `""` |  |
 | copySecretJob.imagePullPolicy | string | `"IfNotPresent"` |  |
 | copySecretJob.name | string | `"copy-secrets-job"` |  |
 | copySecretJob.registry | string | `"docker.io"` |  |
 | copySecretJob.repository | string | `"alpine/k8s"` |  |
+| copySecretJob.resources | string | `""` |  |
 | copySecretJob.serviceaccount | string | `"tuf-secret-copy-job"` |  |
 | copySecretJob.version | string | `"sha256:fb0d2db81fb0f98abb1adf5246d6f0f4d19f34031afe4759cb7ad8e2eb8d2c01"` |  |
 | ctlog.createcerts.fullnameOverride | string | `"ctlog-createcerts"` |  |
