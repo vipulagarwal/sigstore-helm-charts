@@ -64,6 +64,10 @@ spec:
             "--db_name=$(MYSQL_DATABASE)",
             "--mysql_uri=$(MYSQL_USER):$(MYSQL_PASSWORD)@tcp($(MYSQL_HOSTNAME):$(MYSQL_PORT))/"
           ]
+    {{- if .Values.createdb.resources }}
+          resources:
+{{ toYaml .Values.createdb.resources | indent 12 }}
+    {{- end }}
     {{- if .Values.createdb.securityContext }}
       securityContext:
 {{ toYaml .Values.createdb.securityContext | indent 8 }}
