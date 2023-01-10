@@ -21,6 +21,7 @@ Update the status of an existing Trillian tree
 | enabled | bool | `false` |  |
 | namespace.create | bool | `false` |  |
 | namespace.name | string | `"trillian-system"` |  |
+| resources | string | `""` |  |
 | securityContext.runAsNonRoot | bool | `true` |  |
 | securityContext.runAsUser | int | `65533` |  |
 | serviceAccount.annotations | object | `{}` |  |

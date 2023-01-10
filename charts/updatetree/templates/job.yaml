@@ -28,6 +28,10 @@ spec:
             "--admin_server={{ .Values.trillian.logServer.name }}.{{ .Values.trillian.namespace }}:{{ .Values.trillian.logServer.portRPC}}"
             {{- end }}
           ]
+    {{- if .Values.resources }}
+          resources:
+{{ toYaml .Values.resources | indent 12 }}
+    {{- end }}
     {{- if .Values.securityContext }}
       securityContext:
 {{ toYaml .Values.securityContext | indent 8 }}
